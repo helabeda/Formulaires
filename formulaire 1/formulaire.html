@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevProd Solution</title>
+    <link rel="stylesheet" href="formulaire.css" />
+    <link rel="stylesheet" href="formulaire.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <section>
+    <div class="all">
+      <h1><strong> Login Here</strong></h1>
+    <form>
+          <div class="input-username">
+             <label for="username"></label>
+             <i class="fa fa-envelope-o" ></i>
+             <input type="email" class="input" placeholder="Adresse Mail" title="Créer votre adresse mail" autofocus required>
+          </div> 
+          <div class="input-pw">
+             <label for="user-pw"></label>
+             <i class="fa fa-key" ></i>
+             <input placeholder="Mot de Passe" type="password" class="input" name="user-pw" id="user-pw" title="Créer votre mot de passe" autofocus required>
+            <span class="eye" onclick="myFunction()">
+              <i id="hide1" class="fa fa-eye"></i>
+              <i id="hide2" class="fa fa-eye-slash" title="Afficher votre Mot de Passe"></i>
+            </span>
+          </div>
+          <div class="box">
+            <input type="checkbox" id="remember" class="box"> 
+            <label for="remember" class="rmbr"> Remember Me</label>
+          </div>
+           
+             <button class="btn" type="button" title="Connexion">Connexion</button>
+    </form>
+          <div class="mdp">
+             <a href="./mdp.html" class="link" title="Mot de passe oublié ?">Mot de passe oublié ?</a>
+          </div>
+    </div>
+  </section>
+  <script>
+    function myFunction() {
+      var x = document.getElementById ("user-pw");
+      var y = document.getElementById ("hide1");
+      var z = document.getElementById ("hide2");
+
+      if (x.type === 'password'){
+        x.type = "text";
+        y.style.display = "block";
+        z.style.display = "none";
+      }
+      else{
+        x.type = "password";
+        y.style.display = "none";
+        z.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
